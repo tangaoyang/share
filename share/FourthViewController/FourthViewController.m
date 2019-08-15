@@ -51,11 +51,7 @@
         
     } else if(indexPath.section == 1){
         cell.iimageView.image = [UIImage imageNamed:@"tt2.jpg"];
-        
-    } else if(indexPath.section == 2){
-        cell.iimageView.image = [UIImage imageNamed:@"tt2.jpg"];
-    } else if(indexPath.section == 3){
-        cell.iimageView.image = [UIImage imageNamed:@"tt2.jpg"];
+
     } else {
         cell.iimageView.image = [UIImage imageNamed:@"tt3.jpg"];
         
@@ -68,7 +64,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

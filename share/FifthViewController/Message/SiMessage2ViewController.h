@@ -11,6 +11,17 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SiMessage2ViewController : UIViewController
+<
+UITableViewDelegate,
+UITableViewDataSource,
+UITextFieldDelegate
+>
+@property UITextField *textField;
+@property UITableView *tableView;
+@property NSMutableArray *messageArr;
+@property (nonatomic) NSNumber *rowHeight;
+@property NSMutableArray *rowHeightArr;
+
 
 @end
 

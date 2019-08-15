@@ -24,7 +24,7 @@
     [self.view addSubview:openImageView];
     [openImageView setImage:openImage];
     
-    [self performSelector:@selector(next) withObject:self afterDelay:2];
+    [self performSelector:@selector(next) withObject:self afterDelay:6];
     
     
 }

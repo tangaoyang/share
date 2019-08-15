@@ -33,12 +33,12 @@
     UIImageView *kaijiLogoImageView = [[UIImageView alloc] initWithImage:kaijiLogoImage];
     kaijiLogoImageView.frame = CGRectMake(150, 90, 110, 110);
     [self.view addSubview:kaijiLogoImageView];
-    /*
+    
     UILabel *kaijiLabel = [[UILabel alloc] initWithFrame:CGRectMake(157, 200, 100, 50)];
     [self.view addSubview:kaijiLabel];
     kaijiLabel.text = @"SHARE" ;
     kaijiLabel.textColor = [UIColor whiteColor];
-    kaijiLabel.font = [UIFont systemFontOfSize:30];*/
+    kaijiLabel.font = [UIFont systemFontOfSize:30];
      
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -199,6 +199,11 @@
     //设置分栏控制器的透明度
     tbController.tabBar.translucent = NO;
     
+    } else {
+         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"警告" message:@"账号与密码不匹配!" preferredStyle:UIAlertControllerStyleAlert];
+         UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"sure" style:UIAlertActionStyleCancel handler:nil];
+         [alert addAction:sureAction];
+         [self presentViewController:alert animated:NO completion:nil];
     }
     
 }
