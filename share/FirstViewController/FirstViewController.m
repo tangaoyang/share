@@ -89,7 +89,7 @@
         ScrollerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"123" forIndexPath:indexPath];
         
         
-        return cell;
+        return nil;
     } else if(indexPath.section == 1){
         
         TAY2TableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"456"forIndexPath:indexPath];

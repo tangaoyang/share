@@ -156,7 +156,7 @@
         //self -> _iimageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 80, 230, 140)];
         //[self->_selectButton removeFromSuperview];
         //[self.view addSubview:self -> _iimageView];
-        [self->_selectButton setImage:imagee forState:UIControlStateNormal];
+        [self->_selectButton setImage:[imagee imageWithRenderingMode:UIImageRenderingModeAutomatic] forState:UIControlStateNormal];
     }];
     [root returnText2:^(NSNumber *num){
         self -> _num = num;
@@ -205,6 +205,20 @@
     [btn addTarget:self action:@selector(pressAutoClose:) forControlEvents:UIControlEventTouchDown];
 }
 
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if(_openSelect == NO){
+        return 1;
+    } else {
+        return 4;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 25;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     _cell = [_ttableView dequeueReusableCellWithIdentifier:@"111" forIndexPath:indexPath];
@@ -224,18 +238,6 @@
     
     return _cell;
     
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(_openSelect == NO){
-        return 1;
-    } else {
-        return 4;
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 25;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

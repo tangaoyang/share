@@ -32,9 +32,8 @@
 - (void)next{
     
     UIWindow *window = self.view.window;
-    ViewController *root = [[ViewController alloc] init] ;
+    ViewController *root = [[ViewController alloc] init];
     window.rootViewController = root;
-    
 }
 
 /*

@@ -11,6 +11,7 @@
 #import "BasicViewController.h"
 #import "SecretViewController.h"
 #import "SetMessageViewController.h"
+#import "ViewController.h"
 
 @interface SetViewController ()
 
